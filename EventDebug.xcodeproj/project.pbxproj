@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0332368319BF559300C559A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0332368219BF559300C559A2 /* Cocoa.framework */; };
+		0332368D19BF559300C559A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0332368B19BF559300C559A2 /* InfoPlist.strings */; };
+		0332369619BF55BC00C559A2 /* EventDebug.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0332369519BF55BC00C559A2 /* EventDebug.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0332367F19BF559300C559A2 /* EventDebug.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventDebug.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		0332368219BF559300C559A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0332368519BF559300C559A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0332368619BF559300C559A2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0332368719BF559300C559A2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0332368A19BF559300C559A2 /* EventDebug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EventDebug-Info.plist"; sourceTree = "<group>"; };
+		0332368C19BF559300C559A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0332368E19BF559300C559A2 /* EventDebug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventDebug-Prefix.pch"; sourceTree = "<group>"; };
+		0332369419BF55BC00C559A2 /* EventDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDebug.h; sourceTree = "<group>"; };
+		0332369519BF55BC00C559A2 /* EventDebug.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EventDebug.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0332367C19BF559300C559A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0332368319BF559300C559A2 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0332367619BF559300C559A2 = {
+			isa = PBXGroup;
+			children = (
+				0332368819BF559300C559A2 /* EventDebug */,
+				0332368119BF559300C559A2 /* Frameworks */,
+				0332368019BF559300C559A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0332368019BF559300C559A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0332367F19BF559300C559A2 /* EventDebug.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0332368119BF559300C559A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0332368219BF559300C559A2 /* Cocoa.framework */,
+				0332368419BF559300C559A2 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0332368419BF559300C559A2 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0332368519BF559300C559A2 /* Foundation.framework */,
+				0332368619BF559300C559A2 /* CoreData.framework */,
+				0332368719BF559300C559A2 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0332368819BF559300C559A2 /* EventDebug */ = {
+			isa = PBXGroup;
+			children = (
+				0332369419BF55BC00C559A2 /* EventDebug.h */,
+				0332369519BF55BC00C559A2 /* EventDebug.mm */,
+				0332368919BF559300C559A2 /* Supporting Files */,
+			);
+			path = EventDebug;
+			sourceTree = "<group>";
+		};
+		0332368919BF559300C559A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0332368A19BF559300C559A2 /* EventDebug-Info.plist */,
+				0332368B19BF559300C559A2 /* InfoPlist.strings */,
+				0332368E19BF559300C559A2 /* EventDebug-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0332367E19BF559300C559A2 /* EventDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0332369119BF559300C559A2 /* Build configuration list for PBXNativeTarget "EventDebug" */;
+			buildPhases = (
+				0332367B19BF559300C559A2 /* Sources */,
+				0332367C19BF559300C559A2 /* Frameworks */,
+				0332367D19BF559300C559A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventDebug;
+			productName = EventDebug;
+			productReference = 0332367F19BF559300C559A2 /* EventDebug.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0332367719BF559300C559A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Josh Aas";
+			};
+			buildConfigurationList = 0332367A19BF559300C559A2 /* Build configuration list for PBXProject "EventDebug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0332367619BF559300C559A2;
+			productRefGroup = 0332368019BF559300C559A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0332367E19BF559300C559A2 /* EventDebug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0332367D19BF559300C559A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0332368D19BF559300C559A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0332367B19BF559300C559A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0332369619BF55BC00C559A2 /* EventDebug.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0332368B19BF559300C559A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0332368C19BF559300C559A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0332368F19BF559300C559A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0332369019BF559300C559A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0332369219BF559300C559A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventDebug/EventDebug-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"XP_MACOSX=1",
+				);
+				INFOPLIST_FILE = "EventDebug/EventDebug-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		0332369319BF559300C559A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EventDebug/EventDebug-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "XP_MACOSX=1";
+				INFOPLIST_FILE = "EventDebug/EventDebug-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0332367A19BF559300C559A2 /* Build configuration list for PBXProject "EventDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0332368F19BF559300C559A2 /* Debug */,
+				0332369019BF559300C559A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0332369119BF559300C559A2 /* Build configuration list for PBXNativeTarget "EventDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0332369219BF559300C559A2 /* Debug */,
+				0332369319BF559300C559A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0332367719BF559300C559A2 /* Project object */;
+}

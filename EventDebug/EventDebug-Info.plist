@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundlePackageType</key>
+	<string>BRPL</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en-US</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.mozilla.EventDebugPlugin</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>WebPluginMIMETypes</key>
+	<dict>
+		<key>application/x-event-debug</key>
+		<dict>
+			<key>WebPluginTypeDescription</key>
+			<string>Event Debug</string>
+		</dict>
+	</dict>
+	<key>WebPluginDescription</key>
+	<string>Mozilla NPAPI Event Debug Plugin</string>
+	<key>WebPluginName</key>
+	<string>Event Debug Plugin</string>
+</dict>
+</plist>

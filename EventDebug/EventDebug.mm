@@ -67,7 +67,6 @@ void redrawPlugin(NPP instance) {
   rect.bottom = (int16_t)windowHeight;
   rect.right = (int16_t)windowWidth;
   gBrowserFuncs->invalidaterect(instance, &rect);
-  gBrowserFuncs->forceredraw(instance);
 }
 
 NSString* stringForType(NPCocoaEventType type) {
@@ -417,23 +416,28 @@ int16_t NPP_HandleEvent(NPP instance, void* event)
     case NPCocoaEventFocusChanged:
     case NPCocoaEventWindowFocusChanged:
       handleFocusEvent(instance, event);
-      break;    
+      break;
     case NPCocoaEventTextInput:
       handleTextEvent(instance, event);
       break;
     case NPCocoaEventKeyDown:
       if ((cocoaEvent->data.key.modifierFlags & NSDeviceIndependentModifierFlagsMask) == NSControlKeyMask) {
         NSString* characters = (NSString*)cocoaEvent->data.key.charactersIgnoringModifiers;
-        if ([characters isEqualToString:@"k"])
+        if ([characters isEqualToString:@"k"]) {
           gDisplayMode = eKeyMode;
-        else if ([characters isEqualToString:@"m"])
+        }
+        else if ([characters isEqualToString:@"m"]) {
           gDisplayMode = eMouseMode;
-        else if ([characters isEqualToString:@"f"])
+        }
+        else if ([characters isEqualToString:@"f"]) {
           gDisplayMode = eFocusMode;
-        else if ([characters isEqualToString:@"d"])
+        }
+        else if ([characters isEqualToString:@"d"]) {
           gDisplayMode = eDrawMode;
-        else if ([characters isEqualToString:@"t"])
+        }
+        else if ([characters isEqualToString:@"t"]) {
           gDisplayMode = eTextMode;
+        }
         // redraw in case display mode changed
         redrawPlugin(instance);
       }

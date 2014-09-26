@@ -170,7 +170,8 @@ void handleMouseEvent(NPP instance, void* event) {
   redrawPlugin(instance);
 
   // if this is a right click put up a context menu
-  if (cocoaEvent->data.mouse.buttonNumber == 1) {
+  if (eventType == NPCocoaEventMouseDown &&
+      cocoaEvent->data.mouse.buttonNumber == 1) {
     // leak it, who cares for testing purposes
     NSMenu* menu = [[NSMenu alloc] initWithTitle:@""];
     NSMenuItem* menuItem = [[NSMenuItem alloc] initWithTitle:@"Foo" action:nil keyEquivalent:@""];

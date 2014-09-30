@@ -389,6 +389,8 @@ void NPP_Print(NPP instance, NPPrint* platformPrint)
 {
 }
 
+static uint32_t sEventCount = 0;
+
 int16_t NPP_HandleEvent(NPP instance, void* event)
 {
   if (!event) {
@@ -397,6 +399,12 @@ int16_t NPP_HandleEvent(NPP instance, void* event)
   }
 
   NPCocoaEvent* cocoaEvent = (NPCocoaEvent*)event;
+
+  bool printEventLog = false;
+  if (printEventLog) {
+    sEventCount++;
+    NSLog(@"Received event #%d: %@\n", sEventCount, stringForType(cocoaEvent->type));
+  }
 
   switch (cocoaEvent->type) {
     case NPCocoaEventMouseMoved:
@@ -422,6 +430,12 @@ int16_t NPP_HandleEvent(NPP instance, void* event)
       handleTextEvent(instance, event);
       break;
     case NPCocoaEventKeyDown:
+    {
+      bool testComplexTextInput = false;
+      if (testComplexTextInput &&
+          [(NSString*)cocoaEvent->data.key.charactersIgnoringModifiers isEqualToString:@"j"]) {
+        return kNPEventStartIME;
+      }
       if ((cocoaEvent->data.key.modifierFlags & NSDeviceIndependentModifierFlagsMask) == NSControlKeyMask) {
         NSString* characters = (NSString*)cocoaEvent->data.key.charactersIgnoringModifiers;
         if ([characters isEqualToString:@"k"]) {
@@ -442,6 +456,7 @@ int16_t NPP_HandleEvent(NPP instance, void* event)
         // redraw in case display mode changed
         redrawPlugin(instance);
       }
+    }
     case NPCocoaEventKeyUp:
     case NPCocoaEventFlagsChanged:
       handleKeyEvent(instance, event);
